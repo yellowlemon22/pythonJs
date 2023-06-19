@@ -3,8 +3,8 @@ function toggleContent() {
   var javascriptContent = document.getElementById("javascriptContent");
   var pythonContent = document.getElementById("pythonContent");
 
-  javascriptContent.classList.toggle("active");
-  pythonContent.classList.toggle("active");
+  javascriptContent.classList.toggle("js");
+  pythonContent.classList.toggle("py");
 }
 
 
@@ -128,7 +128,7 @@ const py = [
     id: "pythonContent",
     class: "content active",
     code: "Python",
-    explanation: "３個目の記事だよ３"
+    explanation: "３個目の記事だよー"
   },
   {
     id: "pythonContent",
@@ -173,7 +173,7 @@ const js = [
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "３個目の記事だよ３"
+    explanation: "３個目の記事だよー"
   },
   {
     id: "javascriptContent",
@@ -210,6 +210,26 @@ function displayContent(index) {
     <h2>${js[index].code}の記事</h2>
     <p>${js[index].explanation}</p>
   `;
+
+  // クリックされたオブジェクトの画像を非表示
+  contentContainer.style.display = "none";
+}
+
+function displayContent(index) {
+  const contentContainer = document.getElementById("contentContainer");
+  const javascriptContent = document.getElementById("javascriptContent");
+  const pythonContent = document.getElementById("pythonContent");
+
+  // クリックされたオブジェクトの内容を表示
+  pythonContent.innerHTML = `
+  <h2>${py[index].code}の記事</h2>
+  <p>${py[index].explanation}</p>
+`;
+
+javascriptContent.innerHTML = `
+<h2>${js[index].code}の記事</h2>
+<p>${js[index].explanation}</p>
+`;
 
   // クリックされたオブジェクトの画像を非表示
   contentContainer.style.display = "none";

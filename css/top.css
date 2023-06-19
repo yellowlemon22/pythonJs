@@ -34,11 +34,15 @@ button {
 }
 
 .content {
+  display: block;
+}
+
+.content.js {
   display: none;
 }
 
-.content.active {
-  display: block;
+.content.py {
+  display: none;
 }
 
 /* .btn{
