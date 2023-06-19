@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>解説サイト</title>
+  <style>
+    #content {
+      margin: 20px;
+      font-size: 18px;
+    }
+    #pythonButton, #javascriptButton {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    <p id="pythonText">Pythonの解説文</p>
+    <p id="javascriptText" style="display: none;">JavaScriptの解説文</p>
+  </div>
+  <button id="pythonButton" onclick="showPythonText()">Python</button>
+  <button id="javascriptButton" onclick="showJavaScriptText()">JavaScript</button>
+
+  <script>
+    function showPythonText() {
+      document.getElementById("pythonText").style.display = "block";
+      document.getElementById("javascriptText").style.display = "none";
+    }
+
+    function showJavaScriptText() {
+      document.getElementById("pythonText").style.display = "none";
+      document.getElementById("javascriptText").style.display = "block";
+    }
+  </script>
+</body>
+</html>
