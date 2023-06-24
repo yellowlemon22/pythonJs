@@ -11,15 +11,18 @@
 
   <header>
  
-    <button id="toggleButton" onclick="toggleContent()">表示切り替え</button>
-    <!-- 
+    <!-- <button id="toggleButton" onclick="toggleContent()">表示切り替え</button> -->
+    
     <div class="btn">
-      <label class="switch__label">
-          <input type="checkbox" class="switch__input"/>
+      <label class="switch__label content">
+          <input type="checkbox" class="switch__input" id="toggleButton" onclick="toggleContent()"/>
+          
           <span class="switch__content"></span>
+          <span id="languagePy" class="content">Python</span>
+          <span id="languageJs" class="content languageJs">JavaScript</span>
           <span class="switch__circle"></span>
       </label>
-    </div> -->
+    </div>
 
     <!-- <h1 class="language">Python</h1>
     <h1 class="language">JavaScript</h1> -->
@@ -89,7 +92,7 @@
       </div>
 
       <div id="pythonContent" class="content">
-        <!-- JavaScriptの記事のコンテンツ -->
+        <!-- Pythonの記事のコンテンツ -->
         <h2>Pythonの記事</h2>
         <p>ブロックを押してみましょう</p>
       </div>

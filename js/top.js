@@ -2,9 +2,13 @@
 function toggleContent() {
   var javascriptContent = document.getElementById("javascriptContent");
   var pythonContent = document.getElementById("pythonContent");
+  var languageJavascript = document.getElementById("languageJs");
+  var languagePython = document.getElementById("languagePy");
 
   javascriptContent.classList.toggle("js");
   pythonContent.classList.toggle("py");
+  languageJavascript.classList.toggle("languageJs");
+  languagePython.classList.toggle("languagePy");
 }
 
 
@@ -161,43 +165,43 @@ const js = [
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "１個目の記事だよー"
+    explanation: "１個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "２個目の記事だよー"
+    explanation: "２個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "３個目の記事だよー"
+    explanation: "３個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "４個目の記事だよー"
+    explanation: "４個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "５個目の記事だよー"
+    explanation: "５個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "６個目の記事だよー"
+    explanation: "６個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
     code: "JavaScript",
-    explanation: "7個目の記事だよー"
+    explanation: "7個目の記事だよ"
   },
 ]
 
@@ -247,3 +251,4 @@ javascriptContent.innerHTML = `
 // const listParent = document.getElementById("article");
 // listParent.insertAdjacentHTML("beforeend", dom);
 // // });
+

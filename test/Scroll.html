@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* スクロールアニメーション用のクラス */
+    .scroll-animation {
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#section1">セクション1</a></li>
+        <li><a href="#section2">セクション2</a></li>
+        <li><a href="#section3">セクション3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="section1">
+    <h2>セクション1</h2>
+    <!-- コンテンツ -->
+    <div class="a"></div>
+  </section>
+
+  <section id="section2">
+    <h2>セクション2</h2>
+    <!-- コンテンツ -->
+    <div class="a"></div>
+  </section>
+
+  <section id="section3">
+    <h2>セクション3</h2>
+    <!-- コンテンツ -->
+    <div class="a"></div>
+  </section>
+
+  <style>
+    .a{
+      height: 800px;
+    }
+  </style>
+
+  <script>
+    // ページ内リンクのクリックイベントを処理する
+    var links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault(); // リンクのデフォルトの動作をキャンセル
+
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          // 対象要素が存在する場合はスクロールアニメーションを実行
+          smoothScroll(target);
+        }
+      });
+    });
+
+    // スクロールアニメーションを実行する関数
+function smoothScroll(target) {
+  var targetPosition = target.getBoundingClientRect().top;
+  var startPosition = window.pageYOffset;
+  var distance = targetPosition - startPosition;
+  var startTime = null;
+  var duration = 500; // アニメーションの時間（ミリ秒）
+  var scrollSpeed = 20; // スクロール速度（ピクセル/フレーム）
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    var timeElapsed = currentTime - startTime;
+    var run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) {
+      // 指定したスクロール速度に合わせて呼び出し間隔を調整
+      var scrollInterval = Math.ceil(timeElapsed / (duration / scrollSpeed));
+      setTimeout(function() {
+        requestAnimationFrame(animation);
+      }, scrollInterval);
+    }
+  }
+
+  // イージング関数（ここではeaseInOutQuadを使用）
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+  </script>
+</body>
+</html>
