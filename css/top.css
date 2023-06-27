@@ -9,6 +9,10 @@ main{
   height: calc(100vh - 40px);
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 /*======== ヘッダー ==========*/
 header{
   height: 40px;
@@ -270,6 +274,11 @@ h2{
 /*======== 真ん中ブロックカラム ==========*/
 .middle_block{
   max-width: 300px;
+}
+
+img{
+  height: 50px;
+  /* mix-blend-mode: multiply;白抜き効かない*/
 }
 
 /*======== 右説明カラム ==========*/
