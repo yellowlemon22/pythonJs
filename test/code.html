@@ -6,12 +6,17 @@
   <title>Document</title>
 </head>
 <body>
+  
+  <p class="codeTitle">jsのcode</p>
   <pre>
     <code>
-      ここにソースコードを書く
-jfdfjdfpsj
-aspo
-sfos
+      pre {
+          padding: 1em;/* 内側の余白 */
+          margin: 0 0 1.5em;/* 外側の余白 */
+          border: solid 1px #eaedf2;/* 枠線 */
+          background: #f3f6fc;/* 背景色 */
+          color: #54687c;/* 文字色 */
+        }
     </code>
   </pre>
   
@@ -25,21 +30,25 @@ sfos
   
   <style>
 
+/* code */
+
+.codeTitle {
+    padding: 5px 10px;
+    background: #7493f8;
+    color: #fafafa;
+    margin: 0;
+    max-width: 70.2%;
+}
+
   code {
-    padding: 0.2em 0.3em;/* 内側の余白 */
-    margin: 0 0.2em;/* 外側の余白 */
-    border-radius: 5px;/* 角の丸み */
-    background: #f1f2f3;/* 背景色 */
-    color: #404040;/* 文字色 */
-    font-size: 0.9em;/* 文字サイズ */
+    font-family: "Menlo", "Consolas", "monaco", "monospace", "ＭＳ ゴシック", sans-serif;
   }
 
   pre {
-    padding: 1em;/* 内側の余白 */
+    padding: 0.5em;/* 内側の余白 */
     margin: 0 0 1.5em;/* 外側の余白 */
-    border: solid 1px #eaedf2;/* 枠線 */
     background: #f3f6fc;/* 背景色 */
-    color: #54687c;/* 文字色 */
+    max-width: 71%;
 }
   
   </style>

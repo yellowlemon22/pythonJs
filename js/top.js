@@ -119,109 +119,99 @@ const py = [
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
-    explanation: "１個目の記事だよー"
+    codeTitle:"pyのcode",
+    code:`pre {
+        padding: 1em;/* 内側の余白 */
+        margin: 0 0 1.5em;/* 外側の余白 */
+        border: solid 1px #eaedf2;/* 枠線 */
+        background: #f3f6fc;/* 背景色 */
+        color: #54687c;/* 文字色 */
+    }`,
+    explanation: "１個目の記事だよ"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "２個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "３個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "４個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "５個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "６個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "7個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "8個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "9個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "10個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "11個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "12個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "13個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "14個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "15個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "16個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "17個目の記事だよー"
   },
   {
     id: "pythonContent",
     class: "content active",
-    code: "Python",
     explanation: "18個目の記事だよー"
   },
 ]
@@ -230,109 +220,99 @@ const js = [
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
+    codeTitle:"jsのcode",
+    code:`pre {
+        padding: 1em;/* 内側の余白 */
+        margin: 0 0 1.5em;/* 外側の余白 */
+        border: solid 1px #eaedf2;/* 枠線 */
+        background: #f3f6fc;/* 背景色 */
+        color: #54687c;/* 文字色 */
+    }`,
     explanation: "１個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "２個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "３個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "４個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "５個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "６個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "7個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "8個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "9個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "10個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "11個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "12個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "13個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "14個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "15個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "16個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "17個目の記事だよ"
   },
   {
     id: "javascriptContent",
     class: "content active",
-    code: "JavaScript",
     explanation: "18個目の記事だよ"
   },
 ]
@@ -356,15 +336,29 @@ function displayContent(index) {
   const javascriptContent = document.getElementById("javascriptContent");
   const pythonContent = document.getElementById("pythonContent");
 
-  // クリックされたオブジェクトの内容を表示
-  pythonContent.innerHTML = `
-  <h2>${py[index].code}の記事</h2>
+// クリックされたオブジェクトの内容を表示
+pythonContent.innerHTML = `
+<dev class="code">
+  <p class="codeTitle">${py[index].codeTitle}</p>
+  <pre>
+    <code>
+    ${py[index].code}
+    </code>
+  </pre>
   <p>${py[index].explanation}</p>
+</div>
 `;
 
 javascriptContent.innerHTML = `
-<h2>${js[index].code}の記事</h2>
-<p>${js[index].explanation}</p>
+<dev class="code">
+  <p class="codeTitle">${js[index].codeTitle}</p>
+  <pre>
+    <code>
+    ${js[index].code}
+    </code>
+  </pre>
+  <p>${js[index].explanation}</p>
+</dev>
 `;
 
   // クリックされたオブジェクトの画像を非表示

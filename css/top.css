@@ -272,11 +272,11 @@ h2{
 }
 
 /*======== 真ん中ブロックカラム ==========*/
-.middle_block{
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* max-width: 300px; */
-}
+/* .middle_block{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+} */
 
 img{
   height: 45px;
@@ -290,4 +290,29 @@ img{
 /*======== 右説明カラム ==========*/
 .right_explanation{
   overflow-y: auto;
+}
+
+/*--- code ---*/
+.code{
+  position: relative;
+  top: 50px; /* 適切な値を指定してください */
+}
+
+.codeTitle {
+  padding: 5px 10px;
+  background: #7493f8;
+  color: #fafafa;
+  margin: 0;
+  max-width: 90%;
+}
+
+code {
+  font-family: "Menlo", "Consolas", "monaco", "monospace", "ＭＳ ゴシック", sans-serif;
+}
+
+pre {
+  padding: 0.5em;/* 内側の余白 */
+  margin: 0 0 1.5em;/* 外側の余白 */
+  background: #f3f6fc;/* 背景色 */
+  max-width: 91.2%;
 }
